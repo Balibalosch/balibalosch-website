@@ -1,0 +1,16 @@
+---
+import "../assets/app.css";
+import BaseLayout from "./BaseLayout.astro";
+
+const { frontmatter } = Astro.props;
+---
+
+<meta charset="utf-8" />
+<BaseLayout>
+  <article class="mx-auto w-full max-w-3xl px-6 py-10">
+    <h1 class="title">{frontmatter.title}</h1>
+    <p>Published on: {frontmatter.pubDate.toString().slice(0, 10)}</p>
+    <p>Written by {frontmatter.author}</p>
+    <slot />
+  </article>
+</BaseLayout>
