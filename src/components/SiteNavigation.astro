@@ -16,20 +16,20 @@ const currentPath = normalizePath(pathname);
 const isActivePath = (href: string) => normalizePath(href) === currentPath;
 ---
 
-<div class="drawer min-h-screen">
-  <input id="site-drawer" type="checkbox" class="drawer-toggle" />
-  <div class="drawer-content flex min-h-screen flex-col">
+<div class="d-drawer min-h-screen">
+  <input id="site-drawer" type="checkbox" class="d-drawer-toggle" />
+  <div class="d-drawer-content flex min-h-screen flex-col">
     <slot name="before-nav" />
     <div class="relative z-10 bg-base-200">
       <div
         class="sticky top-0 z-30 w-full border-b border-base-300 bg-base-200"
       >
-        <div class="navbar mx-auto w-full max-w-5xl px-6">
-          <div class="navbar-start">
+        <div class="d-navbar mx-auto w-full max-w-5xl px-6">
+          <div class="d-navbar-start">
             <label
               for="site-drawer"
               aria-label="open sidebar"
-              class="btn btn-square btn-ghost lg:hidden"
+              class="d-btn d-btn-square d-btn-ghost lg:hidden"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -46,15 +46,15 @@ const isActivePath = (href: string) => normalizePath(href) === currentPath;
             </label>
           </div>
 
-          <div class="navbar-center hidden lg:flex">
-            <div role="tablist" class="tabs tabs-border">
+          <div class="d-navbar-center hidden lg:flex">
+            <div role="tablist" class="d-tabs d-tabs-border">
               {
                 navigationItems.map((item) => (
                   <a
                     role="tab"
                     href={item.href}
                     aria-current={isActivePath(item.href) ? "page" : undefined}
-                    class={`tab text-xl ${isActivePath(item.href) ? "tab-active" : ""}`}
+                    class={`d-tab text-xl ${isActivePath(item.href) ? "d-tab-active" : ""}`}
                   >
                     {item.label}
                   </a>
@@ -63,18 +63,21 @@ const isActivePath = (href: string) => normalizePath(href) === currentPath;
             </div>
           </div>
 
-          <div class="navbar-end"></div>
+          <div class="d-navbar-end"></div>
         </div>
       </div>
       <slot />
     </div>
   </div>
 
-  <div class="drawer-side">
-    <label for="site-drawer" aria-label="close sidebar" class="drawer-overlay"
+  <div class="d-drawer-side">
+    <label
+      for="site-drawer"
+      aria-label="close sidebar"
+      class="d-drawer-overlay"
     ></label>
 
-    <ul class="menu bg-base-200 min-h-full w-80 p-4">
+    <ul class="d-menu bg-base-200 min-h-full w-80 p-4">
       <li>
         <h1
           class="text-5xl font-(family-name:--font-oooh-baby) self-center mt-3"
@@ -82,7 +85,7 @@ const isActivePath = (href: string) => normalizePath(href) === currentPath;
           Balibalosch
         </h1>
       </li>
-      <div class="divider"></div>
+      <div class="d-divider"></div>
       {
         navigationItems.map((item) => (
           <li>
@@ -91,7 +94,7 @@ const isActivePath = (href: string) => normalizePath(href) === currentPath;
               aria-current={isActivePath(item.href) ? "page" : undefined}
               class={
                 isActivePath(item.href)
-                  ? "menu-active text-xl my-1"
+                  ? "d-menu-active text-xl my-1"
                   : "text-xl my-1"
               }
             >

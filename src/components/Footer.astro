@@ -5,17 +5,17 @@ import { navigationItems } from "../data/navigation";
 
 <footer class="bg-base-200 text-base-content">
   <div class="mx-auto w-full max-w-5xl px-6 py-10">
-    <div class="footer footer-vertical gap-10 sm:footer-horizontal">
+    <div class="d-footer d-footer-vertical gap-10 sm:d-footer-horizontal">
       <aside class="max-w-60">
-        <div class="footer-title">Balibalosch</div>
+        <div class="d-footer-title">Balibalosch</div>
         <p class="leading-loose">BalFolk in Leipzig.</p>
       </aside>
 
       <nav>
-        <h6 class="footer-title">Navigation</h6>
+        <h6 class="d-footer-title">Navigation</h6>
         {
           navigationItems.map((item) => (
-            <a href={item.href} class="link link-hover">
+            <a href={item.href} class="d-link d-link-hover">
               {item.label}
             </a>
           ))
@@ -23,9 +23,9 @@ import { navigationItems } from "../data/navigation";
       </nav>
 
       <nav>
-        <h6 class="footer-title">Kontakt</h6>
+        <h6 class="d-footer-title">Kontakt</h6>
         <p>Bei Fragen, Anregungen und für die Aufnahme in den Mailverteiler:</p>
-        <a href="mailto:balibalosch@notraces.net" class="link link-hover">
+        <a href="mailto:balibalosch@notraces.net" class="d-link d-link-hover">
           balibalosch@notraces.net
         </a>
       </nav>
