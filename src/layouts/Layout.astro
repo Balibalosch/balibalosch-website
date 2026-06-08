@@ -8,12 +8,12 @@ import SiteNavigation from "../components/SiteNavigation.astro";
 const pathname = Astro.url.pathname;
 ---
 
-<html lang="en">
+<html lang="en" class="bg-base-200">
   <Head />
-  <body>
+  <body class="min-h-screen bg-base-200 text-base-content">
     <SiteNavigation pathname={pathname}>
       <Hero slot="before-nav" />
-      <main class="flex-1">
+      <main class="flex-1 bg-base-100">
         <div class="prose mx-auto w-full max-w-5xl px-6 py-10 text-justify">
           <slot />
         </div>

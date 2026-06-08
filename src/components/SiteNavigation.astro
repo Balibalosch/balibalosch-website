@@ -20,8 +20,8 @@ const isActivePath = (href: string) => normalizePath(href) === currentPath;
   <input id="site-drawer" type="checkbox" class="drawer-toggle" />
   <div class="drawer-content flex min-h-screen flex-col">
     <slot name="before-nav" />
-    <div class="relative z-10 bg-base-100">
-      <div class="sticky top-0 z-30 w-full bg-base-300">
+    <div class="relative z-10 bg-base-200">
+      <div class="sticky top-0 z-30 w-full border-b border-base-300 bg-base-200">
         <div class="navbar mx-auto w-full max-w-5xl px-6">
           <div class="navbar-start">
             <label
