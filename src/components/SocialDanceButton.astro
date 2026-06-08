@@ -6,16 +6,13 @@ interface Props {
   alt?: string;
 }
 
-const {
-  src,
-  cropClass,
-  href,
-  alt = "Social dance button",
-} = Astro.props;
+const { src, cropClass, href, alt = "Social dance button" } = Astro.props;
 ---
 
-<a href={href} class="d-hover-3d m-2">
-  <figure class="d-mask d-mask-circle w-30 h-30 overflow-hidden">
+<a href={href} class="lg:d-hover-3d m-2">
+  <figure
+    class="d-mask d-mask-circle h-24 w-24 overflow-hidden sm:h-28 sm:w-28"
+  >
     <img class={cropClass} src={src} alt={alt} />
   </figure>
   <div></div>

@@ -11,22 +11,17 @@ const buttons = Array.from({ length: 10 }, (_, index) => {
     cropClass:
       id <= 8
         ? `h-full w-full object-cover scale-235 translate-x-1`
-        : `h-full w-full object-cover scale-195 -translate-y-1`,
+        : `h-full w-full object-cover scale-195`,
     href: socialDanceButtonsUrl,
     alt: `Social dance button ${id}`,
   };
 });
 ---
 
-<div class="d-card bg-base-200 shadow-lg">
+<div class="d-card bg-base-200 shadow-md">
   <div class="d-card-body p-4">
-    <h3 class="d-card-title">Social Dance Buttons von Maartje de Goede</h3>
-    <p>
-      Nicht von uns, aber wir finden die Buttons sehr toll und teilen all die
-      wichtigen Botschaften darauf.
-    </p>
     <div
-      class="not-prose w-full max-w-full overflow-x-auto pb-4 snap-x snap-mandatory"
+      class="not-prose w-full max-w-full overflow-x-auto snap-x snap-mandatory"
     >
       <div class="d-carousel d-carousel-center w-full overscroll-x-contain">
         {

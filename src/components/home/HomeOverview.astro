@@ -1,0 +1,90 @@
+---
+const cardShellClass = "d-card bg-base-200 shadow-md";
+const cardBodyClass = "d-card-body gap-3 p-5";
+const eyebrowClass = "text-sm font-bold uppercase tracking-[0.2em] opacity-50";
+const bodyCopyClass = "leading-8 text-justify";
+---
+
+<div class="space-y-4">
+  <section
+    class="grid gap-8 xl:grid-cols-[minmax(0,1.2fr)_minmax(18rem,0.8fr)]"
+  >
+    <div class="space-y-6">
+      <h1 class="text-5xl font-(family-name:--font-oooh-baby) sm:text-6xl">
+        Bienvenue&hairsp;!
+      </h1>
+      <p class="max-w-3xl text-xl leading-[1.8] text-justify">
+        Willkommen in unserer feinen Leipziger Bal Folk Gruppe. Wenn du noch nie
+        von Bal Folk gehört hast, lies zuerst bei
+        <a href="/balfolk/" class="d-link">Was? Bal Folk?</a>
+        rein.
+      </p>
+      <p class="max-w-3xl text-lg leading-[1.9] text-justify">
+        Bevor du kommst, schau dich gern einmal auf unserer Website um. Wir
+        haben ein paar grundlegende Standpunkte und Werte bei allem, was wir
+        veranstalten. Wenn du damit gut mitgehen kannst, komm gern vorbei. Und
+        wenn du noch keinen Plan hast, wie diese Tänze aussehen, bist du genauso
+        willkommen.
+      </p>
+    </div>
+
+    <div class="grid gap-4 sm:grid-cols-2 xl:grid-cols-1">
+      <div class={cardShellClass}>
+        <div class={cardBodyClass}>
+          <p class={eyebrowClass}>Wann</p>
+          <ul class="space-y-1 text-lg leading-8">
+            <li>Dienstags, alle zwei Wochen</li>
+            <li>(ungerade KW)</li>
+            <li>19-20 Uhr Workshop</li>
+            <li>ab 20 Uhr freies Tanzen</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class={cardShellClass}>
+        <div class={cardBodyClass}>
+          <p class={eyebrowClass}>Kosten</p>
+          <p class="text-lg leading-8 text-justify">
+            Ca. 5-15 EUR Spende pro Person.
+          </p>
+          <p class="text-justify">Haste mehr? Gibste mehr.</p>
+          <p class="text-justify">Haste weniger? Gibste weniger.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="d-card overflow-hidden bg-base-200 shadow-md lg:d-card-side">
+      <figure class="bg-base-100 lg:w-[42%]">
+        <iframe
+          title="Karte zur Schmiede in Leipzig-Plagwitz"
+          class="aspect-4/3 min-h-72 w-full border-0"
+          loading="lazy"
+          src="https://www.openstreetmap.org/export/embed.html?bbox=12.311975061893465%2C51.325675808670084%2C12.315671145915985%2C51.32725968945437&layer=mapnik&marker=51.326468%2C12.313823"
+        ></iframe>
+      </figure>
+      <div class="d-card-body gap-4 p-6 lg:w-[58%]">
+        <div class="space-y-2">
+          <p class={eyebrowClass}>Adresse</p>
+          <div class="text-lg leading-8">
+            <span class="block">In der Schmiede</span>
+            <span class="block">Am Kanal 30</span>
+            <span class="block">Leipzig-Plagwitz</span>
+          </div>
+        </div>
+        <p class={bodyCopyClass}>
+          Vor Ort durchs große Tor in den Hof, dort auf der rechten Seite in den
+          hell erleuchteten Raum hinter der Lagerfeuerstelle; das Tor sieht
+          manchmal wenig einladend aus, lasst euch davon nicht abschrecken.
+        </p>
+        <p>
+          Noch eine <a
+            href="https://balibalosch.wordpress.com/wp-content/uploads/2019/01/skizze.pdf"
+            class="d-link">Skizze</a
+          > zur Hilfe :)
+        </p>
+      </div>
+    </div>
+  </section>
+</div>

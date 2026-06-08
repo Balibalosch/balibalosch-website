@@ -1,0 +1,73 @@
+---
+import SocialDanceButtonContainer from "../SocialDanceButtonContainer.astro";
+
+const cardShellClass =
+  "d-card  bg-base-200 shadow-md transition hover:shadow-lg border-base-200 border";
+const cardBodyClass = "d-card-body gap-4 p-6";
+const bodyCopyClass = "leading-8 text-justify";
+---
+
+<div>
+  <section class="space-y-5 mt-10">
+    <div class="space-y-2">
+      <h2 class="text-3xl font-semibold">Bevor du kommst</h2>
+      <p class="width-full leading-8 text-justify">
+        Wir wollen, dass sich bei uns alle wohlfühlen können. Hier findest du
+        die wichtigsten Dinge, wenn du zum ersten Mal vorbeischaust.
+      </p>
+    </div>
+
+    <div class="grid gap-4 lg:grid-cols-3">
+      <a href="/code-of-conduct/" class={cardShellClass}>
+        <div class={cardBodyClass}>
+          <h3 class="d-card-title text-2xl">Code of Conduct</h3>
+          <p class={bodyCopyClass}>
+            Wir wollen, dass sich bei uns alle wohlfühlen können - auch du. Lies
+            dir vor dem ersten Abend einmal unseren Umgang miteinander durch.
+          </p>
+          <div class="d-card-actions justify-start pt-2">
+            <span class="d-link d-link-hover">Zum Code of Conduct</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="/vielfalt-staerken/" class={cardShellClass}>
+        <div class={cardBodyClass}>
+          <h3 class="d-card-title text-2xl">Vielfalt stärken</h3>
+          <p class={bodyCopyClass}>
+            Menschen aus unserem Orga-Team positionieren sich bewusst auch
+            politisch. Hier kannst du mehr über unsere Haltung und die Texte
+            dazu lesen.
+          </p>
+          <div class="d-card-actions justify-start pt-2">
+            <span class="d-link d-link-hover">Mehr dazu</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="mailto:balibalosch@notraces.net" class={cardShellClass}>
+        <div class={cardBodyClass}>
+          <h3 class="d-card-title text-2xl">Newsletter / Kontakt</h3>
+          <p class={bodyCopyClass}>
+            Wenn du Workshop-Themen, Bandabende oder die Signal-Gruppe nicht
+            verpassen willst, melde dich per Mail bei uns.
+          </p>
+          <div class="d-card-actions justify-start pt-2">
+            <span class="d-link d-link-hover">balibalosch@notraces.net</span>
+          </div>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <section class="space-y-4 mt-10">
+    <h2 class="text-3xl font-semibold">Social Dance Buttons</h2>
+    <p class="width-full leading-8 text-justify">
+      Nicht von uns, aber wir finden die Social Dance Buttons von <a
+        href="https://www.maartjedegoede.nl/"
+        class="d-link">Maartje de Goede</a
+      > sehr toll und teilen all die wichtigen Botschaften darauf.
+    </p>
+    <SocialDanceButtonContainer />
+  </section>
+</div>
