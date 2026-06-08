@@ -1,4 +1,6 @@
 ---
+import LocationModal from "./LocationModal.astro";
+
 const cardShellClass = "d-card bg-base-200 shadow-md";
 const cardBodyClass = "d-card-body gap-3 p-5";
 const eyebrowClass = "text-sm font-bold uppercase tracking-[0.2em] opacity-50";
@@ -79,10 +81,11 @@ const bodyCopyClass = "leading-8 text-justify";
           manchmal wenig einladend aus, lasst euch davon nicht abschrecken.
         </p>
         <p>
-          Noch eine <a href="/documents/home/skizze.pdf" class="d-link"
-            >Skizze</a
-          > zur Hilfe :)
+          Noch eine <a class="d-link" onclick="my_modal.showModal()">
+            Skizze
+          </a>zur Hilfe :)
         </p>
+        <LocationModal />
       </div>
     </div>
   </section>
