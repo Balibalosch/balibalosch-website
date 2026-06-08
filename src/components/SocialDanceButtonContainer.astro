@@ -1,13 +1,25 @@
 ---
+import type { ImageMetadata } from "astro";
 import SocialDanceButton from "./SocialDanceButton.astro";
 
 const socialDanceButtonsUrl =
   "https://www.maartjedegoede.nl/ontwerp/project/Social%20Dance%20Buttons";
+const buttonImages = import.meta.glob<{ default: ImageMetadata }>(
+  "/src/assets/images/social-dance-buttons/*.{jpg,jpeg,png,webp}",
+  { eager: true }
+);
+
 const buttons = Array.from({ length: 10 }, (_, index) => {
   const id = index + 1;
+  const imagePath = `/src/assets/images/social-dance-buttons/x${id}.jpg`;
+  const imageModule = buttonImages[imagePath];
+
+  if (!imageModule) {
+    throw new Error(`Missing social dance button image: ${imagePath}`);
+  }
 
   return {
-    src: `/images/social-dance-buttons/x${id}.jpg`,
+    src: imageModule.default,
     cropClass:
       id <= 8
         ? `h-full w-full object-cover scale-235 translate-x-1`

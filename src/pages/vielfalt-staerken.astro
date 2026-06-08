@@ -1,5 +1,10 @@
 ---
+import { Image } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
+import logoBfgfImage from "../assets/images/vielfalt/logo-bfgf.png";
+import progressImage from "../assets/images/vielfalt/progress.png";
+import textDeuPreviewImage from "../assets/images/vielfalt/text-deu-preview.png";
+import textEngPreviewImage from "../assets/images/vielfalt/text-eng-preview.png";
 ---
 
 <Layout>
@@ -12,8 +17,8 @@ import Layout from "../layouts/Layout.astro";
       <figure
         class="d-mask d-mask-circle h-24 w-24 overflow-hidden border border-base-300 bg-base-100"
       >
-        <img
-          src="/images/vielfalt/progress.png"
+        <Image
+          src={progressImage}
           alt="Anstecker mit Schriftzug: Balfolk bleibt bunt."
           class="h-full w-full object-cover"
         />
@@ -21,8 +26,8 @@ import Layout from "../layouts/Layout.astro";
       <figure
         class="d-mask d-mask-circle h-24 w-24 overflow-hidden border border-base-300 bg-base-100"
       >
-        <img
-          src="/images/vielfalt/logo-bfgf.png"
+        <Image
+          src={logoBfgfImage}
           alt="Anstecker mit Schriftzug: Balfolk gegen Faschismus."
           class="h-full w-full object-cover"
         />
@@ -43,22 +48,18 @@ import Layout from "../layouts/Layout.astro";
 
     <figure>
       <a href="/documents/vielfalt/text-deu.pdf">
-        <img
-          src="/images/vielfalt/text-deu-preview.png"
+        <Image
+          src={textDeuPreviewImage}
           alt="Deutsche PDF zu Vielfalt im BalFolk"
-          width="594"
-          height="833"
         />
       </a>
     </figure>
 
     <figure>
       <a href="/documents/vielfalt/text-eng.pdf">
-        <img
-          src="/images/vielfalt/text-eng-preview.png"
+        <Image
+          src={textEngPreviewImage}
           alt="English PDF about diversity in BalFolk"
-          width="609"
-          height="852"
         />
       </a>
     </figure>

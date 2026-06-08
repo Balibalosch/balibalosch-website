@@ -1,6 +1,15 @@
+---
+import { Image } from "astro:assets";
+import sketchImage from "../../assets/images/home/skizze.png";
+---
+
 <dialog id="my_modal" class="d-modal">
   <div class="d-modal-box">
-    <img src="/images/home/skizze.png" />
+    <Image
+      src={sketchImage}
+      alt="Skizze zum Eingang in der Schmiede in Leipzig-Plagwitz"
+      class="h-auto w-full"
+    />
   </div>
   <form method="dialog" class="d-modal-backdrop">
     <button>close</button>
