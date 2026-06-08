@@ -1,85 +1,69 @@
 ---
+import SocialDanceButton from "../components/SocialDanceButton.astro";
+import SocialDanceButtonContainer from "../components/SocialDanceButtonContainer.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
   <article>
-    <!-- https://www.maartjedegoede.nl/images/ontwerp_portfolio_beelden/x10.jpg -->
-
-    <p>
-      Willkommen in unserer feinen Leipziger BalFolk Gruppe. Wenn du noch nie
-      von BalFolk gehört hast, lies mal
-      <a href="https://balibalosch.wordpress.com/was-wird-getanzt/" class="d-link"
-        >hier</a
-      >.
-    </p>
-
     <section>
-      <h2>Bevor du kommst…</h2>
+      <div class="float-right">
+        <SocialDanceButton
+          src="https://balibalosch.wordpress.com/wp-content/uploads/2024/07/progress.png"
+          cropClass=""
+          href="#"
+          alt="Anstecker mit Schriftzug: Balfolk bleibt bunt."
+        />
+
+        <SocialDanceButton
+          src="https://balibalosch.wordpress.com/wp-content/uploads/2024/07/logo_bfgf.png"
+          cropClass=""
+          href="#"
+          alt="Anstecker mit Schriftzug: Balfolk gegen Faschismus."
+        />
+      </div>
+      <h2 class="mt-0 text-5xl font-(family-name:--font-oooh-baby)">
+        Bienvenue!
+      </h2>
       <p>
-        … schau dich gern einmal auf unserer Website um. Wir haben paar
-        grundlegende Standpunkte und Werte bei allem, was wir veranstalten. Wenn
-        du da nicht gut mitgehen kannst, ist Balibalosch vielleicht nicht der
-        Ort, an dem du tanzen willst. Aber wenn doch, komm gern vorbei! Wir
-        freuen uns auf dich – insbesondere auch, wenn du noch keinen Plan hast,
-        wie diese ganzen Tänze aussehen.
+        Willkommen in unserer feinen Leipziger BalFolk Gruppe. Wenn du noch nie
+        von BalFolk gehört hast, lies mal
+        <a
+          href="https://balibalosch.wordpress.com/was-wird-getanzt/"
+          class="d-link">hier</a
+        >.
       </p>
 
-      <figure>
-        <img
-          src="https://balibalosch.wordpress.com/wp-content/uploads/2024/07/progress.png?w=1024"
-          alt="Illustration zum Code of Conduct"
-          width="1024"
-          height="1024"
-        />
-        <figcaption>
-          Wir wollen, dass sich bei uns alle wohlfühlen können - auch du! Bitte
-          lies dir einmal unseren
-          <a href="https://balibalosch.wordpress.com/code-of-conduct/">
-            Code of Conduct
-          </a>
-          durch.
-        </figcaption>
-      </figure>
+      <p>
+        Bevor du kommst schau dich gern einmal auf unserer Website um. Wir haben
+        ein paar grundlegende Standpunkte und Werte bei allem, was wir. Wenn du
+        da nicht gut mitgehen kannst, ist Balibalosch vielleicht nicht der Ort,
+        an dem du tanzen willst. Aber wenn doch, komm gern vorbei! Wir freuen
+        uns auf dich - insbesondere auch, wenn du noch keinen Plan hast, wie
+        diese ganzen Tänze aussehen.
+      </p>
 
-      <figure>
-        <img
-          src="https://balibalosch.wordpress.com/wp-content/uploads/2024/07/logo_bfgf.png?w=626"
-          alt="Logo der politischen Initiative"
-          width="626"
-          height="626"
-        />
-        <figcaption>
-          Menschen aus unserem Orga-Team sind auch Teil einer Gruppe, die sich
-          bewusst auch politisch positioniert.
-          <a
-            href="https://balibalosch.wordpress.com/vielfalt-starken-im-balfolk/"
-          >
-            Hier
-          </a>
-          kannst du mehr dazu lesen.
-        </figcaption>
-      </figure>
+      <p>
+        Wir wollen, dass sich bei uns alle wohlfühlen können - auch du! Bitte
+        lies dir einmal unseren
+        <a href="https://balibalosch.wordpress.com/code-of-conduct/">
+          Code of Conduct
+        </a>
+        durch.
+      </p>
 
-      <figure>
-        <img
-          src="https://balibalosch.wordpress.com/wp-content/uploads/2024/07/dance-roles.png?w=268"
-          alt="Social Dance Buttons zu Tanzrollen"
-          width="268"
-          height="268"
-        />
-        <figcaption>
-          Nicht von uns, aber wir finden die Buttons sehr toll und teilen all
-          die wichtigen Botschaften darauf:
-          <a
-            href="https://www.maartjedegoede.nl/ontwerp/project/Social%20Dance%20Buttons"
-          >
-            Social Dance Buttons
-          </a>
-          von Maartje de Goede.
-        </figcaption>
-      </figure>
+      <p>
+        Menschen aus unserem Orga-Team sind auch Teil einer Gruppe, die sich
+        bewusst auch politisch positioniert.
+        <a
+          href="https://balibalosch.wordpress.com/vielfalt-starken-im-balfolk/"
+        >
+          Hier
+        </a>
+        kannst du mehr dazu lesen.
+      </p>
     </section>
+    <SocialDanceButtonContainer />
 
     <section>
       <h2>Termine</h2>

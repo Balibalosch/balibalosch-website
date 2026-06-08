@@ -1,0 +1,29 @@
+---
+interface Props {
+  src: string;
+  cropClass: string;
+  href: string;
+  alt?: string;
+}
+
+const {
+  src,
+  cropClass,
+  href,
+  alt = "Social dance button",
+} = Astro.props;
+---
+
+<a href={href} class="d-hover-3d m-2">
+  <figure class="d-mask d-mask-circle w-30 h-30 overflow-hidden">
+    <img class={cropClass} src={src} alt={alt} />
+  </figure>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+</a>
