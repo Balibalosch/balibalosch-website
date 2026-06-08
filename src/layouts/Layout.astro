@@ -1,0 +1,24 @@
+---
+import "../assets/app.css";
+import Footer from "../components/Footer.astro";
+import Head from "../components/Head.astro";
+import Hero from "../components/Hero.astro";
+import SiteNavigation from "../components/SiteNavigation.astro";
+
+const pathname = Astro.url.pathname;
+---
+
+<html lang="en">
+  <Head />
+  <body>
+    <SiteNavigation pathname={pathname}>
+      <Hero slot="before-nav" />
+      <main class="flex-1">
+        <div class="prose mx-auto w-full max-w-5xl px-6 py-10 text-justify">
+          <slot />
+        </div>
+      </main>
+      <Footer />
+    </SiteNavigation>
+  </body>
+</html>

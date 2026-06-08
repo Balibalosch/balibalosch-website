@@ -1,27 +1,64 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
+import Layout from "../layouts/Layout.astro";
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="icon" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Balibalosch</title>
-  </head>
-  <body>
-    <BaseLayout>
-      <article>
-        <h2>Vielfalt stärken!</h2>
-        Wir wünschen uns eine BalFolk-Gemeinschaft, in der Vielfalt Platz hat. Einige
-        aus unserem Orga-Team sind in einer überregionalen Gruppe organisiert, die
-        sich Gedanken macht, wie wir Abende und Festivals so organisieren können,
-        dass insbesondere Menschen aus marginalisierten Gruppen sich wohl und sicher
-        fühlen können. Wir haben einen Text verfasst, der erklärt, warum wir das tun
-        und was uns wichtig ist. (Klick aufs Bild öffnet die pdf)
-      </article>
-    </BaseLayout>
-  </body>
-</html>
+<Layout>
+  <article>
+    <p>
+      Wir wünschen uns eine BalFolk-Gemeinschaft, in der Vielfalt Platz hat.
+      Einige aus unserem Orga-Team sind in einer überregionalen Gruppe
+      organisiert, die sich Gedanken macht, wie wir Abende und Festivals so
+      organisieren können, dass insbesondere Menschen aus marginalisierten
+      Gruppen sich wohl und sicher fühlen können.
+    </p>
+
+    <p>
+      Wir haben einen Text verfasst, der erklärt, warum wir das tun und was uns
+      wichtig ist. Klick aufs Bild öffnet die PDF.
+    </p>
+
+    <figure>
+      <a
+        href="https://balibalosch.wordpress.com/wp-content/uploads/2024/07/text-deu.pdf"
+      >
+        <img
+          src="https://balibalosch.wordpress.com/wp-content/uploads/2024/07/vielfalt_deu.png?w=594"
+          alt="Deutsche PDF zu Vielfalt im BalFolk"
+          width="594"
+          height="833"
+        />
+      </a>
+    </figure>
+
+    <figure>
+      <a
+        href="https://balibalosch.wordpress.com/wp-content/uploads/2024/07/text-eng.pdf"
+      >
+        <img
+          src="https://balibalosch.wordpress.com/wp-content/uploads/2024/07/diversity_eng.png?w=609"
+          alt="English PDF about diversity in BalFolk"
+          width="609"
+          height="852"
+        />
+      </a>
+    </figure>
+
+    <p>
+      Wenn du selbst Veranstalter*in, Musiker*in oder Workshopleitende*r bist
+      und diese Texte oder das Logo für deine Veranstaltungen oder CDs nutzen
+      möchtest, melde dich gern über die Mailadresse, die du auf der PDF-Datei
+      findest.
+    </p>
+
+    <p>
+      Wenn du mehr zur Anastasia-Szene und anderen rechten Bewegungen erfahren
+      möchtest oder viel wichtiger gute Ideen brauchst, wie mit ihnen umzugehen
+      ist, stöbere durch die
+      <a
+        href="https://cryptpad.fr/pad/#/2/pad/view/BHnROuW5AegsSq2p5HBJ1nuvYvi9B-G7d9L+iuMQMeM/embed/"
+      >
+        Linksammlung
+      </a>. Wir haben einiges zusammengetragen.
+    </p>
+  </article>
+</Layout>
