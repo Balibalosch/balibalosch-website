@@ -21,7 +21,9 @@ const isActivePath = (href: string) => normalizePath(href) === currentPath;
   <div class="d-drawer-content flex min-h-screen flex-col">
     <slot name="before-nav" />
     <div class="relative z-10 bg-base-200">
-      <div class="sticky top-0 z-30 w-full shadow-md bg-base-200">
+      <div
+        class="sticky top-0 z-30 w-full border border-base-300 shadow-sm bg-base-200"
+      >
         <div class="d-navbar mx-auto w-full max-w-5xl px-6">
           <div class="d-navbar-start">
             <label
