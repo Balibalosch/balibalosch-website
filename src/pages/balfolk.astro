@@ -1,110 +1,198 @@
 ---
 import Layout from "../layouts/Layout.astro";
+
+const articleClass = "mx-auto max-w-4xl space-y-8";
+const sectionClass = "space-y-5";
+const dividedSectionClass = "space-y-5 border-base-300 border-t pt-8";
+const bodyCopyClass = "leading-8 text-justify";
+const embedFrameClass = "aspect-video w-full overflow-hidden rounded-box shadow-md";
+const embedClass = "h-full w-full";
+const linkRowClass = "flex flex-wrap gap-4 text-sm";
+const linkClass = "d-link";
+const embedAllow =
+  "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
 ---
 
 <Layout>
-  <article class="prose max-w-none">
-    <h2 class="mt-0 text-5xl font-(family-name:--font-oooh-baby)">
-      Was&hairsp;? Bal Folk&hairsp;?
-    </h2>
+  <article class={articleClass}>
+    <section class={sectionClass}>
+      <h2 class="mt-0 text-5xl font-(family-name:--font-oooh-baby)">
+        Was&hairsp;? Bal Folk&hairsp;?
+      </h2>
 
-    <p>
-      Die Welt des Folk ist groß, unser Tanzraum aber klein und gemütlich, daher
-      tanzen wir nicht alles, was man so mit Folk betiteln könnte – wir tanzen
-      BalFolk, in Südfrankreich auch als balèti bekannt. Was das ist? Ein
-      kleiner Videoeinstieg:
-    </p>
+      <p class={bodyCopyClass}>
+        Die Welt des Folk ist groß, unser Tanzraum aber klein und gemütlich, daher
+        tanzen wir nicht alles, was man so mit Folk betiteln könnte – wir tanzen
+        BalFolk, in Südfrankreich auch als balèti bekannt. Was das ist? Ein
+        kleiner Videoeinstieg:
+      </p>
 
-    <p>
-      <a
-        href="https://www.youtube.com/watch?v=09p2maUC_g8"
-        target="_blank"
-        rel="noopener"
-        >Link
-      </a>
-    </p>
+      <figure class="space-y-3">
+        <div class={embedFrameClass}>
+          <iframe
+            class={embedClass}
+            title="Videoeinstieg zu BalFolk"
+            loading="lazy"
+            allow={embedAllow}
+            allowfullscreen
+            src="https://www.youtube.com/embed/09p2maUC_g8"
+          ></iframe>
+        </div>
 
-    <p>Nichts verstanden? Aber vielleicht ein bisschen was gesehen.</p>
+        <p class={linkRowClass}>
+          <a
+            href="https://www.youtube.com/watch?v=09p2maUC_g8"
+            target="_blank"
+            rel="noopener"
+            class={linkClass}
+            >Link
+          </a>
+        </p>
+      </figure>
 
-    <hr />
+      <p class={bodyCopyClass}>Nichts verstanden? Aber vielleicht ein bisschen was gesehen.</p>
+    </section>
 
-    <p>
-      Wir verstehen uns beim Tanzen nicht als Traditionalist*innen. Wer also
-      zehn unterschiedliche regionale Varianten der Bourrée à trois temps mit
-      Geschichte und Hintersinn kennen lernen möchte, wird bei uns leider nicht
-      fündig.
-    </p>
+    <section class={dividedSectionClass}>
+      <p class={bodyCopyClass}>
+        Wir verstehen uns beim Tanzen nicht als Traditionalist*innen. Wer also
+        zehn unterschiedliche regionale Varianten der Bourrée à trois temps mit
+        Geschichte und Hintersinn kennen lernen möchte, wird bei uns leider nicht
+        fündig.
+      </p>
 
-    <p>
-      Weil es aber spannend ist, zu nutzen, was da ist, eigene Ideen dazu zu tun
-      und dann zu schauen, was daraus wird, haben wir die Füße auch noch in
-      anderen Ecken der Tanzwelt, zum Beispiel im Tango und in der
-      Kontaktimprovisation. Von dort nehmen wir gern ein paar Dinge mit in
-      unsere Version des BalFolks.
-    </p>
+      <p class={bodyCopyClass}>
+        Weil es aber spannend ist, zu nutzen, was da ist, eigene Ideen dazu zu tun
+        und dann zu schauen, was daraus wird, haben wir die Füße auch noch in
+        anderen Ecken der Tanzwelt, zum Beispiel im Tango und in der
+        Kontaktimprovisation. Von dort nehmen wir gern ein paar Dinge mit in
+        unsere Version des BalFolks.
+      </p>
 
-    <p>
-      Das Schöne am BalFolk ist, dass Lernen beim Tun passiert. Ihr müsst nicht
-      kommen und alles schon können. Ihr könnt euch einfach im Laufe des Abends
-      Stück für Stück hineintanzen. Und die Kreis- und Kettentänze erklären sich
-      meist nach dem ersten Hinsehen und Mitmachen von selbst. Einfach
-      ausprobieren und nachfragen!
-    </p>
+      <p class={bodyCopyClass}>
+        Das Schöne am BalFolk ist, dass Lernen beim Tun passiert. Ihr müsst nicht
+        kommen und alles schon können. Ihr könnt euch einfach im Laufe des Abends
+        Stück für Stück hineintanzen. Und die Kreis- und Kettentänze erklären sich
+        meist nach dem ersten Hinsehen und Mitmachen von selbst. Einfach
+        ausprobieren und nachfragen!
+      </p>
 
-    <p>
-      In der Regel geben wir in der ersten Stunde kleine Workshops, sowohl zur
-      Einführung in die verschiedenen Tänze als auch zu speziellen Themen. Die
-      Themen findet ihr in den Rundmails.
-    </p>
+      <p class={bodyCopyClass}>
+        In der Regel geben wir in der ersten Stunde kleine Workshops, sowohl zur
+        Einführung in die verschiedenen Tänze als auch zu speziellen Themen. Die
+        Themen findet ihr in den Rundmails.
+      </p>
+    </section>
 
-    <hr />
+    <section class={dividedSectionClass}>
+      <p class={bodyCopyClass}>Hier ein kleiner Einblick, wie es aussehen und klingen kann:</p>
 
-    <p>Hier ein kleiner Einblick, wie es aussehen und klingen kann:</p>
+      <div class="grid gap-6 lg:grid-cols-2">
+        <figure class="space-y-3">
+          <div class={embedFrameClass}>
+            <iframe
+              class={embedClass}
+              title="Scottish impaire mit Arasta Bazar in Saint-Gervais d’Auvergne"
+              loading="lazy"
+              allow={embedAllow}
+              allowfullscreen
+              src="https://www.youtube.com/embed/OCtSODYlojs"
+            ></iframe>
+          </div>
 
-    <p>
-      <a
-        href="https://www.youtube.com/watch?v=OCtSODYlojs"
-        target="_blank"
-        rel="noopener"
-        >Link
-      </a>
-      <a
-        href="https://www.youtube.com/watch?v=bX_kM3Upyq0"
-        target="_blank"
-        rel="noopener"
-        >Link
-      </a>
-    </p>
+          <p class={linkRowClass}>
+            <a
+              href="https://www.youtube.com/watch?v=OCtSODYlojs"
+              target="_blank"
+              rel="noopener"
+              class={linkClass}
+              >Link
+            </a>
+          </p>
+        </figure>
 
-    <p>
-      <em>links</em>: Scottish impaire mit Arasta Bazar in Saint-Gervais
-      d’Auvergne<br />
-      (Les grands bals trad, Frankreich)<br />
-      <em>rechts:</em> Cercle circassien mit Parasol in Vialfrè (Gran bal trad, Italien)
-    </p>
+        <figure class="space-y-3">
+          <div class={embedFrameClass}>
+            <iframe
+              class={embedClass}
+              title="Cercle circassien mit Parasol in Vialfrè"
+              loading="lazy"
+              allow={embedAllow}
+              allowfullscreen
+              src="https://www.youtube.com/embed/bX_kM3Upyq0"
+            ></iframe>
+          </div>
 
-    <p>
-      <a
-        href="https://www.youtube.com/watch?v=R6FteMBI5dc"
-        target="_blank"
-        rel="noopener"
-        >Link
-      </a>
-    </p>
+          <p class={linkRowClass}>
+            <a
+              href="https://www.youtube.com/watch?v=bX_kM3Upyq0"
+              target="_blank"
+              rel="noopener"
+              class={linkClass}
+              >Link
+            </a>
+          </p>
+        </figure>
+      </div>
 
-    <p>
-      <em>oben:</em> Mazurka/Valse mit Accordzéâm, Improvisation (Kattendijk, Belgien)<br
-      />
-      <em>unten:</em> Und so was gibt’s auch.
-    </p>
+      <p class={bodyCopyClass}>
+        <em>links</em>: Scottish impaire mit Arasta Bazar in Saint-Gervais
+        d’Auvergne<br />
+        (Les grands bals trad, Frankreich)<br />
+        <em>rechts:</em> Cercle circassien mit Parasol in Vialfrè (Gran bal trad, Italien)
+      </p>
 
-    <p>
-      <a
-        href="https://www.youtube.com/watch?v=daw9n6qTuPc"
-        target="_blank"
-        rel="noopener"
-        >Link
-      </a>
-    </p>
+      <figure class="space-y-3">
+        <div class={embedFrameClass}>
+          <iframe
+            class={embedClass}
+            title="Mazurka/Valse mit Accordzéâm, Improvisation"
+            loading="lazy"
+            allow={embedAllow}
+            allowfullscreen
+            src="https://www.youtube.com/embed/R6FteMBI5dc"
+          ></iframe>
+        </div>
+
+        <p class={linkRowClass}>
+          <a
+            href="https://www.youtube.com/watch?v=R6FteMBI5dc"
+            target="_blank"
+            rel="noopener"
+            class={linkClass}
+            >Link
+          </a>
+        </p>
+      </figure>
+
+      <p class={bodyCopyClass}>
+        <em>oben:</em> Mazurka/Valse mit Accordzéâm, Improvisation (Kattendijk, Belgien)<br
+        />
+        <em>unten:</em> Und so was gibt’s auch.
+      </p>
+
+      <figure class="space-y-3">
+        <div class={embedFrameClass}>
+          <iframe
+            class={embedClass}
+            title="Weiteres BalFolk-Beispielvideo"
+            loading="lazy"
+            allow={embedAllow}
+            allowfullscreen
+            src="https://www.youtube.com/embed/daw9n6qTuPc"
+          ></iframe>
+        </div>
+
+        <p class={linkRowClass}>
+          <a
+            href="https://www.youtube.com/watch?v=daw9n6qTuPc"
+            target="_blank"
+            rel="noopener"
+            class={linkClass}
+            >Link
+          </a>
+        </p>
+      </figure>
+    </section>
   </article>
 </Layout>

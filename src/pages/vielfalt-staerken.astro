@@ -5,81 +5,95 @@ import logoBfgfImage from "../assets/images/vielfalt/logo-bfgf.png";
 import progressImage from "../assets/images/vielfalt/progress.png";
 import textDeuPreviewImage from "../assets/images/vielfalt/text-deu-preview.png";
 import textEngPreviewImage from "../assets/images/vielfalt/text-eng-preview.png";
+
+const articleClass = "mx-auto max-w-4xl space-y-8";
+const sectionClass = "space-y-5";
+const dividedSectionClass = "space-y-5 border-base-300 border-t pt-8";
+const bodyCopyClass = "leading-8 text-justify";
+const badgeFigureClass =
+  "d-mask d-mask-circle h-24 w-24 overflow-hidden border border-base-300 bg-base-100";
+const previewFigureClass = "space-y-3";
+const previewLinkClass = "block overflow-hidden rounded-box shadow-md";
 ---
 
 <Layout>
-  <article class="prose max-w-none">
-    <h2 class="mt-0 text-5xl font-(family-name:--font-oooh-baby)">
-      Vielfalt stärken!
-    </h2>
+  <article class={articleClass}>
+    <section class={sectionClass}>
+      <h2 class="mt-0 text-5xl font-(family-name:--font-oooh-baby)">
+        Vielfalt stärken!
+      </h2>
 
-    <div class="mt-2 flex flex-wrap gap-3">
-      <figure
-        class="d-mask d-mask-circle h-24 w-24 overflow-hidden border border-base-300 bg-base-100"
-      >
-        <Image
-          src={progressImage}
-          alt="Anstecker mit Schriftzug: Balfolk bleibt bunt."
-          class="h-full w-full object-cover"
-        />
-      </figure>
-      <figure
-        class="d-mask d-mask-circle h-24 w-24 overflow-hidden border border-base-300 bg-base-100"
-      >
-        <Image
-          src={logoBfgfImage}
-          alt="Anstecker mit Schriftzug: Balfolk gegen Faschismus."
-          class="h-full w-full object-cover"
-        />
-      </figure>
-    </div>
-    <p>
-      Wir wünschen uns eine BalFolk-Gemeinschaft, in der Vielfalt Platz hat.
-      Einige aus unserem Orga-Team sind in einer überregionalen Gruppe
-      organisiert, die sich Gedanken macht, wie wir Abende und Festivals so
-      organisieren können, dass insbesondere Menschen aus marginalisierten
-      Gruppen sich wohl und sicher fühlen können.
-    </p>
+      <div class="mt-2 flex flex-wrap gap-3">
+        <figure class={badgeFigureClass}>
+          <Image
+            src={progressImage}
+            alt="Anstecker mit Schriftzug: Balfolk bleibt bunt."
+            class="h-full w-full object-cover"
+          />
+        </figure>
+        <figure class={badgeFigureClass}>
+          <Image
+            src={logoBfgfImage}
+            alt="Anstecker mit Schriftzug: Balfolk gegen Faschismus."
+            class="h-full w-full object-cover"
+          />
+        </figure>
+      </div>
 
-    <p>
-      Wir haben einen Text verfasst, der erklärt, warum wir das tun und was uns
-      wichtig ist. Klick aufs Bild öffnet die PDF.
-    </p>
+      <p class={bodyCopyClass}>
+        Wir wünschen uns eine BalFolk-Gemeinschaft, in der Vielfalt Platz hat.
+        Einige aus unserem Orga-Team sind in einer überregionalen Gruppe
+        organisiert, die sich Gedanken macht, wie wir Abende und Festivals so
+        organisieren können, dass insbesondere Menschen aus marginalisierten
+        Gruppen sich wohl und sicher fühlen können.
+      </p>
+    </section>
 
-    <figure>
-      <a href="/documents/vielfalt/text-deu.pdf">
-        <Image
-          src={textDeuPreviewImage}
-          alt="Deutsche PDF zu Vielfalt im BalFolk"
-        />
-      </a>
-    </figure>
+    <section class={dividedSectionClass}>
+      <p class={bodyCopyClass}>
+        Wir haben einen Text verfasst, der erklärt, warum wir das tun und was
+        uns wichtig ist. Klick aufs Bild öffnet die PDF.
+      </p>
 
-    <figure>
-      <a href="/documents/vielfalt/text-eng.pdf">
-        <Image
-          src={textEngPreviewImage}
-          alt="English PDF about diversity in BalFolk"
-        />
-      </a>
-    </figure>
+      <div class="grid gap-6 lg:grid-cols-2">
+        <figure class={previewFigureClass}>
+          <a href="/documents/vielfalt/text-deu.pdf" class={previewLinkClass}>
+            <Image
+              src={textDeuPreviewImage}
+              alt="Deutsche PDF zu Vielfalt im BalFolk"
+            />
+          </a>
+        </figure>
 
-    <p>
-      Wenn du selbst Veranstalter*in, Musiker*in oder Workshopleitende*r bist
-      und diese Texte oder das Logo für deine Veranstaltungen oder CDs nutzen
-      möchtest, melde dich gern über die Mailadresse, die du auf der PDF-Datei
-      findest.
-    </p>
+        <figure class={previewFigureClass}>
+          <a href="/documents/vielfalt/text-eng.pdf" class={previewLinkClass}>
+            <Image
+              src={textEngPreviewImage}
+              alt="English PDF about diversity in BalFolk"
+            />
+          </a>
+        </figure>
+      </div>
+    </section>
 
-    <p>
-      Wenn du mehr zur Anastasia-Szene und anderen rechten Bewegungen erfahren
-      möchtest oder viel wichtiger gute Ideen brauchst, wie mit ihnen umzugehen
-      ist, stöbere durch die
-      <a
-        href="https://cryptpad.fr/pad/#/2/pad/view/BHnROuW5AegsSq2p5HBJ1nuvYvi9B-G7d9L+iuMQMeM/embed/"
-      >
-        Linksammlung
-      </a>. Wir haben einiges zusammengetragen.
-    </p>
+    <section class={dividedSectionClass}>
+      <p class={bodyCopyClass}>
+        Wenn du selbst Veranstalter*in, Musiker*in oder Workshopleitende*r bist
+        und diese Texte oder das Logo für deine Veranstaltungen oder CDs nutzen
+        möchtest, melde dich gern über die Mailadresse, die du auf der PDF-Datei
+        findest.
+      </p>
+
+      <p class={bodyCopyClass}>
+        Wenn du mehr zur Anastasia-Szene und anderen rechten Bewegungen erfahren
+        möchtest oder viel wichtiger gute Ideen brauchst, wie mit ihnen umzugehen
+        ist, stöbere durch die
+        <a
+          href="https://cryptpad.fr/pad/#/2/pad/view/BHnROuW5AegsSq2p5HBJ1nuvYvi9B-G7d9L+iuMQMeM/embed/"
+        >
+          Linksammlung
+        </a>. Wir haben einiges zusammengetragen.
+      </p>
+    </section>
   </article>
 </Layout>
