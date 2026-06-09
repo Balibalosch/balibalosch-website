@@ -6,7 +6,7 @@ const socialDanceButtonsUrl =
   "https://www.maartjedegoede.nl/ontwerp/project/Social%20Dance%20Buttons";
 const buttonImages = import.meta.glob<{ default: ImageMetadata }>(
   "/src/assets/images/social-dance-buttons/*.{jpg,jpeg,png,webp}",
-  { eager: true }
+  { eager: true },
 );
 
 const buttons = Array.from({ length: 10 }, (_, index) => {
@@ -30,7 +30,7 @@ const buttons = Array.from({ length: 10 }, (_, index) => {
 });
 ---
 
-<div class="d-card bg-base-200 shadow-md">
+<div class="d-card bg-base-100 shadow-md">
   <div class="d-card-body p-4">
     <div
       class="not-prose w-full max-w-full overflow-x-auto snap-x snap-mandatory"

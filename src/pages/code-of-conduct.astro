@@ -1,135 +1,192 @@
 ---
 import Layout from "../layouts/Layout.astro";
+
+const cardClass = "d-card bg-base-200 shadow-md";
+const cardBodyClass = "d-card-body gap-4 p-6 sm:p-8";
+const sectionLabelClass =
+  "text-sm font-bold uppercase tracking-[0.2em] opacity-50";
+const bodyCopyClass = "leading-8 text-justify";
+const listClass = "list-disc space-y-4 pl-5 leading-8 text-justify";
+const summaryListClass = "list-disc space-y-3 pl-5 leading-7";
 ---
 
 <Layout>
-  <article class="prose max-w-none">
-    <h2 class="mt-0 text-5xl font-(family-name:--font-oooh-baby)">
-      Code of Conduct
-    </h2>
+  <article class="mx-auto max-w-4xl space-y-6">
+    <section class="space-y-5">
+      <div class="space-y-3">
+        <h2 class="mt-0 text-5xl font-(family-name:--font-oooh-baby)">
+          Code of Conduct
+        </h2>
+        <p class="max-w-3xl text-lg leading-8">
+          Bitte lies dir den folgenden Text sorgfältig durch, bevor du zum
+          ersten Mal kommst. Er soll dir vor allem zeigen, wie wir miteinander
+          tanzen und worauf wir achten.
+        </p>
+      </div>
 
-    <p>
-      Zu uns können alle kommen, die tanzen möchten oder auch erstmal zuschauen
-      wollen, bevor sie sich trauen. Bei uns dürfen alle mit allen tanzen, du
-      musst nicht zu zweit oder zu dritt oder sonstwie normiert antanzen.
-    </p>
+      <p class={bodyCopyClass}>
+        Zu uns können alle kommen, die tanzen möchten oder auch erstmal
+        zuschauen wollen, bevor sie sich trauen. Bei uns dürfen alle mit allen
+        tanzen, du musst nicht zu zweit oder zu dritt oder sonstwie normiert
+        antanzen.
+      </p>
 
-    <p>
-      Uns ist ein Anliegen, mit Balibalosch einen Raum zu schaffen, in dem auch
-      Paartanz sich von Rollenzuschreibungen und Stereotypen befreit. Wir
-      verstehen Tanz als Kommunikation und kreativen Ausdruck. Gemeinsam
-      schaffen und erkunden ist schöner! Wir wünschen uns eine freie,
-      spielerische, neugierige Haltung (innen und außen), die offen ist,
-      Begegnung während des tänzerischen Gesprächs zuzulassen und anzuschauen.
-      Und aus der Reihe tanzen ist herzlich willkommen.
-    </p>
+      <p class={bodyCopyClass}>
+        Uns ist ein Anliegen, mit Balibalosch einen Raum zu schaffen, in dem
+        auch Paartanz sich von Rollenzuschreibungen und Stereotypen befreit.
+        Wir verstehen Tanz als Kommunikation und kreativen Ausdruck. Gemeinsam
+        schaffen und erkunden ist schöner! Wir wünschen uns eine freie,
+        spielerische, neugierige Haltung (innen und außen), die offen ist,
+        Begegnung während des tänzerischen Gesprächs zuzulassen und
+        anzuschauen. Und aus der Reihe tanzen ist herzlich willkommen.
+      </p>
 
-    <p>
-      <strong>
-        Bitte lies dir den folgenden Text sorgfältig durch, bevor du zum ersten
-        Mal kommst.
-      </strong>
-    </p>
+      <p class="text-sm leading-7 opacity-60">
+        Mit herzlichem Dank an die Swing Connection Leipzig für die Genehmigung
+        der Weiterverwendung ihrer Vorlage.
+      </p>
+    </section>
 
-    <p>
-      (Mit herzlichem Dank an die Swing Connection Leipzig für die Genehmigung
-      der Weiterverwendung ihrer Vorlage!)
-    </p>
+    <section class={cardClass}>
+      <div class={cardBodyClass}>
+        <p class={sectionLabelClass}>In Kürze</p>
+        <h3 class="d-card-title text-2xl">Worum es uns geht</h3>
+        <ul class={summaryListClass}>
+          <li>Jede*r ist willkommen und darf ohne Vorkenntnisse vorbeikommen.</li>
+          <li>Du darfst einen Tanz jederzeit ablehnen oder abbrechen.</li>
+          <li>Bitte frage nach Einwilligung und achte auf verbale wie nonverbale Signale.</li>
+          <li>Respektiere Bedürfnisse, Grenzen und Präferenzen anderer und benenne deine eigenen.</li>
+          <li>Achte auf dich, deine Tanzpartner*innen und die Menschen um euch herum.</li>
+          <li>Wenn etwas nicht gut läuft oder sich falsch anfühlt, sprich mit dem Orgateam.</li>
+        </ul>
+      </div>
+    </section>
 
-    <p>
-      <strong>
-        Mit deiner Teilnahme an unseren Veranstaltungen erklärst du dich damit
-        einverstanden, unseren Code of Conduct (Selbstverständnis und
-        Verhaltenskodex) zu befolgen. Im Wesentlichen bedeutet das, dass du
-        dafür Sorge trägst, dass sich jede*r – du eingeschlossen – wohl und
-        sicher fühlt.
-      </strong>
-    </p>
+    <section class={cardClass}>
+      <div class={cardBodyClass}>
+        <p class={sectionLabelClass}>Selbstverständnis</p>
+        <h3 class="d-card-title text-2xl">Was uns wichtig ist</h3>
+        <p class={bodyCopyClass}>
+          Mit deiner Teilnahme an unseren Veranstaltungen erklärst du dich damit
+          einverstanden, unseren Code of Conduct (Selbstverständnis und
+          Verhaltenskodex) zu befolgen. Im Wesentlichen bedeutet das, dass du
+          dafür Sorge trägst, dass sich jede*r – du eingeschlossen – wohl und
+          sicher fühlt.
+        </p>
+        <p class={bodyCopyClass}>
+          Jede*r ist bei uns willkommen unabhängig von Geschlechtsidentität,
+          Alter, sexueller Orientierung, Ethnie, Religion, körperlichen und
+          geistigen Einschränkungen etc.
+        </p>
+        <p class={bodyCopyClass}>
+          Wir tolerieren kein Verhalten, das rassistisch, homo- oder
+          transfeindlich oder missachtend gegenüber der Religionsfreiheit, den
+          Menschenrechten und der Menschenwürde ist.
+        </p>
+      </div>
+    </section>
 
-    <p>
-      Jede*r ist bei uns willkommen unabhängig von Geschlechtsidentität, Alter,
-      sexueller Orientierung, Ethnie, Religion, körperlichen und geistigen
-      Einschränkungen etc.
-    </p>
+    <section class={cardClass}>
+      <div class={cardBodyClass}>
+        <p class={sectionLabelClass}>Beim Tanzen miteinander</p>
+        <h3 class="d-card-title text-2xl">Wie wir uns den gemeinsamen Abend wünschen</h3>
+        <p class={bodyCopyClass}>
+          Um unseren Abenden einen sicheren und freudvollen Rahmen zu geben,
+          bitten wir dich, folgende Verhaltensleitlinien zu befolgen:
+        </p>
 
-    <p>
-      Wir tolerieren kein Verhalten, das rassistisch, homo- oder transfeindlich
-      oder missachtend gegenüber der Religionsfreiheit, den Menschenrechten und
-      der Menschenwürde ist.
-    </p>
+        <div class="space-y-3">
+          <h4 class="text-xl font-semibold">Konsens und Bedürfnisse</h4>
+          <ul class={listClass}>
+            <li>
+              Ich darf jederzeit einen Tanz ablehnen oder abbrechen ohne Gründe
+              zu nennen. Ich bedanke mich, nachdem jemand abgelehnt hat mit mir
+              zu tanzen oder zu üben.
+            </li>
+            <li>
+              Wenn ich jemanden zum Tanzen auffordere, beziehe ich die
+              Bedürfnisse und Präferenzen der anderen Person mit ein
+              („Möchtest du führen, folgen oder wechseln?“, „Fühlst du dich mit
+              der engen Tanzhaltung wohl?“ etc.)
+            </li>
+            <li>
+              Ich bitte stets um Einwilligung und achte dabei sowohl auf
+              verbale als auch nonverbale Kommunikation.
+            </li>
+            <li>
+              Ich verstehe mein Tanzen als das Kreieren von Einladungen, die
+              mein*e Partner*in annehmen oder nicht annehmen kann.
+            </li>
+            <li>
+              Ich bitte um Entgegenkommen für meine eigenen Bedürfnisse und
+              Präferenzen („Kannst du bitte deine Hand hier platzieren?“, „Ich
+              würde gern in einer offeneren Tanzhaltung tanzen.“, „Könnten wir
+              bitte weniger Spannung benutzen?“ etc.)
+            </li>
+            <li>
+              Ich frage um Erlaubnis bevor ich beim Üben Feedback gebe und
+              formuliere dieses in einer wertschätzenden Form.
+            </li>
+          </ul>
+        </div>
 
-    <p>
-      Wir dulden keine physische oder emotionale Gewalt, Belästigung, Attacken,
-      Intoleranz und jede Form von gruppen- oder individuenbezogener
-      Menschenfeindlichkeit. Wenn du eine dieser Verhaltensweisen zeigst, werden
-      wir dich von der Veranstaltung ausschließen und rechtliche Schritte
-      erwägen. Falls dir eine dieser Verhaltensweisen widerfährt oder du eine
-      solche beobachtest, bitten wir dich mit dem Orgateam zu sprechen.
-    </p>
+        <div class="space-y-3">
+          <h4 class="text-xl font-semibold">Achtsamkeit und Umgang miteinander</h4>
+          <ul class={listClass}>
+            <li>Ich gehe mit anderen höflich und wertschätzend um.</li>
+            <li>Ich bedanke mich nach einem Tanz oder nach dem gemeinsamen Üben.</li>
+            <li>
+              Ich fordere andere zum Tanzen auf unabhängig von Alter,
+              Geschlechtsidentität, sexueller Orientierung, Ethnie, Religion,
+              Behinderung etc.
+            </li>
+            <li>
+              Ich achte auf mich, meine*n Partner*in und die Personen um mich
+              herum. Ich stelle sicher, dass ich Platz habe, bevor ich mich in
+              eine Richtung bewege oder führe.
+            </li>
+            <li>
+              Ich halte grundlegende Hygiene ein (wasche meine Hände
+              regelmäßig, insbesondere nach dem Toilettengang, bringe
+              Wechselklamotten mit, falls ich stark schwitze, etc.)
+            </li>
+            <li>
+              Wenn ich krank bin, bleibe ich zu Hause, um mich auszukurieren
+              und niemanden anzustecken.
+            </li>
+            <li>
+              Ich behandle die Lokalitäten respektvoll. (Ich gehe mit der
+              Ausstattung umsichtig um, versuche aktiv die Lautstärke im
+              Innenhof auf ein Minimum zu begrenzen, um die da Wohnenden zu
+              schonen, etc.)
+            </li>
+            <li>Bei Fragen zum Code of Conduct wende ich mich ans Orgateam.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-    <p>
-      <strong>
-        Um unseren Abenden einen sicheren und freudvollen Rahmen zu geben,
-        bitten wir dich, folgende Verhaltensleitlinien zu befolgen:
-      </strong>
-    </p>
-
-    <ul>
-      <li>Ich gehe mit anderen höflich und wertschätzend um.</li>
-      <li>Ich bedanke mich nach einem Tanz oder nach dem gemeinsamen Üben.</li>
-      <li>
-        Ich darf jederzeit einen Tanz ablehnen oder abbrechen ohne Gründe zu
-        nennen. Ich bedanke mich, nachdem jemand abgelehnt hat mit mir zu tanzen
-        oder zu üben.
-      </li>
-      <li>
-        Ich fordere andere zum Tanzen auf unabhängig von Alter,
-        Geschlechtsidentität, sexueller Orientierung, Ethnie, Religion,
-        Behinderung etc.
-      </li>
-      <li>
-        Wenn ich jemanden zum Tanzen auffordere, beziehe ich die Bedürfnisse und
-        Präferenzen der anderen Person mit ein („Möchtest du führen, folgen oder
-        wechseln?“, „Fühlst du dich mit der engen Tanzhaltung wohl?“ etc.)
-      </li>
-      <li>
-        Ich bitte stets um Einwilligung und achte dabei sowohl auf verbale als
-        auch nonverbale Kommunikation.
-      </li>
-      <li>
-        Ich verstehe mein Tanzen als das Kreieren von Einladungen, die mein*e
-        Partner*in annehmen oder nicht annehmen kann.
-      </li>
-      <li>
-        Ich bitte um Entgegenkommen für meine eigenen Bedürfnisse und
-        Präferenzen („Kannst du bitte deine Hand hier platzieren?“, „Ich würde
-        gern in einer offeneren Tanzhaltung tanzen.“, „Könnten wir bitte weniger
-        Spannung benutzen?“ etc.)
-      </li>
-      <li>
-        Ich frage um Erlaubnis bevor ich beim Üben Feedback gebe und formuliere
-        dieses in einer wertschätzenden Form.
-      </li>
-      <li>
-        Ich achte auf mich, meine*n Partner*in und die Personen um mich herum.
-        Ich stelle sicher, dass ich Platz habe, bevor ich mich in eine Richtung
-        bewege oder führe.
-      </li>
-      <li>
-        Ich halte grundlegende Hygiene ein (wasche meine Hände regelmäßig,
-        insbesondere nach dem Toilettengang, bringe Wechselklamotten mit, falls
-        ich stark schwitze, etc.)
-      </li>
-      <li>
-        Wenn ich krank bin, bleibe ich zu Hause, um mich auszukurieren und
-        niemanden anzustecken.
-      </li>
-      <li>
-        Ich behandle die Lokalitäten respektvoll. (Ich gehe mit der Ausstattung
-        umsichtig um, versuche aktiv die Lautstärke im Innenhof auf ein Minimum
-        zu begrenzen, um die da Wohnenden zu schonen, etc.)
-      </li>
-      <li>Bei Fragen zum Code of Conduct wende ich mich ans Orgateam.</li>
-    </ul>
+    <section class="space-y-3">
+      <p class={sectionLabelClass}>Wenn etwas passiert</p>
+      <div
+        role="alert"
+        class="d-alert d-alert-soft items-start bg-base-200 text-base-content shadow-md"
+      >
+        <div class="space-y-3">
+          <h3 class="text-2xl font-semibold">Sprich uns an</h3>
+          <p class={bodyCopyClass}>
+            Wir dulden keine physische oder emotionale Gewalt, Belästigung,
+            Attacken, Intoleranz und jede Form von gruppen- oder
+            individuenbezogener Menschenfeindlichkeit.
+          </p>
+          <p class={bodyCopyClass}>
+            Wenn du eine dieser Verhaltensweisen zeigst, werden wir dich von
+            der Veranstaltung ausschließen und rechtliche Schritte erwägen.
+            Falls dir eine dieser Verhaltensweisen widerfährt oder du eine
+            solche beobachtest, bitten wir dich mit dem Orgateam zu sprechen.
+          </p>
+        </div>
+      </div>
+    </section>
   </article>
 </Layout>

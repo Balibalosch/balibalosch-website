@@ -1,4 +1,6 @@
 ---
+import Card from "../Card.astro";
+import LinkCard from "../LinkCard.astro";
 import SocialDanceButtonContainer from "../SocialDanceButtonContainer.astro";
 
 const cardShellClass =
@@ -18,45 +20,27 @@ const bodyCopyClass = "leading-8 text-justify";
     </div>
 
     <div class="grid gap-4 lg:grid-cols-3">
-      <a href="/code-of-conduct/" class={cardShellClass}>
-        <div class={cardBodyClass}>
-          <h3 class="d-card-title text-2xl">Code of Conduct</h3>
-          <p class={bodyCopyClass}>
-            Wir wollen, dass sich bei uns alle wohlfühlen können - auch du. Lies
-            dir vor dem ersten Abend einmal unseren Umgang miteinander durch.
-          </p>
-          <div class="d-card-actions justify-start pt-2">
-            <span class="d-link d-link-hover">Zum Code of Conduct</span>
-          </div>
-        </div>
-      </a>
+      <LinkCard linkTo="/code-of-conduct">
+        <div slot="heading">Code of Conduct</div>
+        Der Code of Conduct beschreibt wie wir miteinander umgehen, sodass unsere
+        Veranstaltungen für alle angenehm und freudvoll sind.
+        <div slot="card-actions">Zum Code of Conduct</div>
+      </LinkCard>
 
-      <a href="/vielfalt-staerken/" class={cardShellClass}>
-        <div class={cardBodyClass}>
-          <h3 class="d-card-title text-2xl">Vielfalt stärken</h3>
-          <p class={bodyCopyClass}>
-            Menschen aus unserem Orga-Team positionieren sich bewusst auch
-            politisch. Hier kannst du mehr über unsere Haltung und die Texte
-            dazu lesen.
-          </p>
-          <div class="d-card-actions justify-start pt-2">
-            <span class="d-link d-link-hover">Mehr dazu</span>
-          </div>
-        </div>
-      </a>
+      <LinkCard linkTo="/vielfalt-staerken">
+        <div slot="heading">Vielfalt stärken</div>
+        Menschen aus unserem Orga-Team positionieren sich bewusst auch politisch.
+        Hier kannst du mehr über unsere Haltung lesen.
+        <div slot="card-actions">Mehr dazu</div>
+      </LinkCard>
 
-      <a href="mailto:balibalosch@notraces.net" class={cardShellClass}>
-        <div class={cardBodyClass}>
-          <h3 class="d-card-title text-2xl">Newsletter / Kontakt</h3>
-          <p class={bodyCopyClass}>
-            Wenn du Workshop-Themen, Bandabende oder die Signal-Gruppe nicht
-            verpassen willst, melde dich per Mail bei uns.
-          </p>
-          <div class="d-card-actions justify-start pt-2">
-            <span class="d-link d-link-hover">balibalosch@notraces.net</span>
-          </div>
-        </div>
-      </a>
+      <LinkCard linkTo="mailto:balibalosch@notraces.org">
+        <div slot="heading">Mailverteiler / Signal</div>
+        Wenn du Ankündigungen zu kommenden Veranstaltungen, Workshops und Bandauftritten
+        haben willst, schreib uns einfach eine Mail und wir fügen dich in den Mailverteiler
+        oder die Signal-Gruppe hinzu.
+        <div slot="card-actions">balibalosch@notraces.org</div>
+      </LinkCard>
     </div>
   </section>
 

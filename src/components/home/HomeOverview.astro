@@ -1,7 +1,8 @@
 ---
+import Card from "../Card.astro";
 import LocationModal from "./LocationModal.astro";
 
-const cardShellClass = "d-card bg-base-200 shadow-md";
+const cardShellClass = "d-card bg-base-100 shadow-md";
 const cardBodyClass = "d-card-body gap-3 p-5";
 const eyebrowClass = "text-sm font-bold uppercase tracking-[0.2em] opacity-50";
 const bodyCopyClass = "leading-8 text-justify";
@@ -15,13 +16,13 @@ const bodyCopyClass = "leading-8 text-justify";
       <h1 class="text-5xl font-(family-name:--font-oooh-baby) sm:text-6xl">
         Bienvenue&hairsp;!
       </h1>
-      <p class="max-w-3xl text-xl leading-[1.8] text-justify">
+      <p class="w-full text-xl leading-[1.8] text-justify">
         Willkommen in unserer feinen Leipziger Bal Folk Gruppe. Wenn du noch nie
         von Bal Folk gehört hast, lies zuerst bei
         <a href="/balfolk/" class="d-link">Was? Bal Folk?</a>
         rein.
       </p>
-      <p class="max-w-3xl text-lg leading-[1.9] text-justify">
+      <p class="w-full text-lg leading-[1.9] text-justify">
         Bevor du kommst, schau dich gern einmal auf unserer Website um. Wir
         haben ein paar grundlegende Standpunkte und Werte bei allem, was wir
         veranstalten. Wenn du damit gut mitgehen kannst, komm gern vorbei. Und
@@ -31,62 +32,56 @@ const bodyCopyClass = "leading-8 text-justify";
     </div>
 
     <div class="grid gap-4 sm:grid-cols-2 xl:grid-cols-1">
-      <div class={cardShellClass}>
-        <div class={cardBodyClass}>
-          <p class={eyebrowClass}>Wann</p>
-          <ul class="space-y-1 text-lg leading-8">
-            <li>Dienstags, alle zwei Wochen</li>
-            <li>(ungerade KW)</li>
-            <li>19-20 Uhr Workshop</li>
-            <li>ab 20 Uhr freies Tanzen</li>
-          </ul>
-        </div>
-      </div>
+      <Card>
+        <div slot="title">Wann</div>
+        <div slot="heading">An jedem zweiten Dienstag</div>
+        <div slot="note">(ungerade KW)</div>
 
-      <div class={cardShellClass}>
-        <div class={cardBodyClass}>
-          <p class={eyebrowClass}>Kosten</p>
-          <p class="text-lg leading-8 text-justify">
-            Ca. 5-15 EUR Spende pro Person.
-          </p>
-          <p>Haste mehr? Gibste mehr.</p>
-          <p>Haste weniger? Gibste weniger.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="d-card overflow-hidden bg-base-200 shadow-md lg:d-card-side">
-      <figure class="bg-base-100 lg:w-[42%]">
-        <iframe
-          title="Karte zur Schmiede in Leipzig-Plagwitz"
-          class="aspect-4/3 min-h-72 w-full border-0"
-          loading="lazy"
-          src="https://www.openstreetmap.org/export/embed.html?bbox=12.311975061893465%2C51.325675808670084%2C12.315671145915985%2C51.32725968945437&layer=mapnik&marker=51.326468%2C12.313823"
-        ></iframe>
-      </figure>
-      <div class="d-card-body gap-4 p-6 lg:w-[58%]">
-        <div class="space-y-2">
-          <p class={eyebrowClass}>Adresse</p>
-          <div class="text-lg leading-8">
-            <span class="block">In der Schmiede</span>
-            <span class="block">Am Kanal 30</span>
-            <span class="block">Leipzig-Plagwitz</span>
+        <div class="space-y-2 text-lg">
+          <div class="flex gap-4">
+            <!-- Some inline styling bc it's only used here -->
+            <span class="w-24 font-medium text-base-content/50">19–20 Uhr</span>
+            <span>Workshop</span>
+          </div>
+          <div class="flex gap-4">
+            <span class="w-24 font-medium text-base-content/50">ab 20 Uhr</span>
+            <span>Freies Tanzen</span>
           </div>
         </div>
-        <p class={bodyCopyClass}>
-          Vor Ort durchs große Tor in den Hof, dort auf der rechten Seite in den
-          hell erleuchteten Raum hinter der Lagerfeuerstelle; das Tor sieht
-          manchmal wenig einladend aus, lasst euch davon nicht abschrecken.
-        </p>
-        <p>
-          Noch eine <button class="d-link" onclick="my_modal.showModal()">
-            Skizze
-          </button> zur Hilfe :)
-        </p>
-        <LocationModal />
-      </div>
+      </Card>
+
+      <Card>
+        <div slot="title">Kosten</div>
+        <div slot="heading">Ca. 5-15€ Spende pro Person</div>
+        Haste mehr? Gibste mehr. <br />
+        Haste weniger? Gibste weniger.
+      </Card>
     </div>
   </section>
+
+  <Card>
+    <iframe
+      class="w-full aspect-4/3"
+      slot="figure"
+      title="Karte zur Schmiede in Leipzig-Plagwitz"
+      loading="lazy"
+      src="https://www.openstreetmap.org/export/embed.html?bbox=12.311975061893465%2C51.325675808670084%2C12.315671145915985%2C51.32725968945437&layer=mapnik&marker=51.326468%2C12.313823"
+    ></iframe>
+    <div slot="title">Adresse</div>
+    <div slot="heading">
+      In der Schmiede<br />
+      Am Kanal 30<br />
+      Leipzig-Plagwitz
+    </div>
+    <p>
+      Vor Ort durchs große Tor in den Hof, dort auf der rechten Seite in den
+      hell erleuchteten Raum hinter der Lagerfeuerstelle; das Tor sieht manchmal
+      wenig einladend aus, lasst euch davon nicht abschrecken.
+    </p>
+    <p>
+      Noch eine <button class="d-link" onclick="my_modal.showModal()">
+        Skizze
+      </button> zur Hilfe :)
+    </p>
+  </Card>
 </div>

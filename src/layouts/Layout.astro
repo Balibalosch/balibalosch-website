@@ -10,16 +10,16 @@ const pathname = Astro.url.pathname;
 
 <html lang="en" class="bg-base-200">
   <Head />
-  <body class="min-h-screen bg-base-200 text-base-content">
+  <body class="min-h-screen bg-base-100 text-base-content">
     <SiteNavigation pathname={pathname}>
       <Hero slot="before-nav" />
-      <main class="relative isolate flex-1 bg-base-100">
+      <main class="relative isolate flex-1 bg-amber-50">
         <div class="relative z-20 mx-auto w-full max-w-5xl px-6 py-10">
           <slot />
         </div>
         <div aria-hidden="true" class="paper-texture-overlay"></div>
       </main>
-      <Footer />
     </SiteNavigation>
+    <Footer />
   </body>
 </html>

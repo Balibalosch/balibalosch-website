@@ -1,0 +1,40 @@
+<div class="d-card overflow-hidden bg-base-100 shadow-md sm:d-card-side">
+  <!-- Only render card areas if slot is filled -->
+  {
+    Astro.slots.has("figure") && (
+      <figure class="sm:basis-[42%]">
+        <slot name="figure" />
+      </figure>
+    )
+  }
+  <div class="d-card-body sm:basis-[58%]">
+    {
+      Astro.slots.has("title") && (
+        <div class="d-card-title text-sm font-bold uppercase tracking-[0.2em] opacity-50">
+          <slot name="title" />
+        </div>
+      )
+    }
+
+    <div class="space-y-4">
+      <div>
+        {
+          Astro.slots.has("heading") && (
+            <div class="text-xl font-semibold">
+              <slot name="heading" />
+            </div>
+          )
+        }
+        {
+          Astro.slots.has("note") && (
+            <div class="text-base text-base-content opacity-60">
+              <slot name="note" />
+            </div>
+          )
+        }
+      </div>
+
+      <slot />
+    </div>
+  </div>
+</div>

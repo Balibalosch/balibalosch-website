@@ -1,0 +1,22 @@
+---
+const { linkTo } = Astro.props;
+---
+
+<a
+  href={linkTo}
+  class="d-card bg-base-100 shadow-md transition hover:shadow-lg border-base-200 border"
+>
+  <div class="d-card-body text-justify">
+    <div class="text-xl font-semibold">
+      <slot name="heading" />
+    </div>
+
+    <slot />
+
+    <div class="d-card-actions mt-auto">
+      <div class="d-link d-link-hover">
+        <slot name="card-actions" />
+      </div>
+    </div>
+  </div>
+</a>
