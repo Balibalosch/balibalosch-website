@@ -15,23 +15,7 @@ import { Font } from "astro:assets";
   <script>
     import type { TransitionBeforePreparationEvent } from "astro:transitions/client";
 
-    declare global {
-      interface Window {
-        __balibaloschPendingScrollRestore?: { top: number } | null;
-        __balibaloschScrollRestoreBound?: boolean;
-      }
-    }
-
-    const sharedShellName = "shared";
-
-    const usesSharedShell = (body: HTMLBodyElement | null) =>
-      body?.dataset.siteShell === sharedShellName;
-
-    const isSamePageHashNavigation = (from: URL, to: URL) =>
-      from.origin === to.origin &&
-      from.pathname === to.pathname &&
-      from.search === to.search &&
-      from.hash !== to.hash;
+    let pendingScrollY: number | null = null;
 
     const clampScrollTop = (top: number) => {
       const maxScrollTop = Math.max(
@@ -42,41 +26,36 @@ import { Font } from "astro:assets";
       return Math.min(Math.max(top, 0), maxScrollTop);
     };
 
-    if (!window.__balibaloschScrollRestoreBound) {
-      window.__balibaloschScrollRestoreBound = true;
-      window.__balibaloschPendingScrollRestore = null;
+    document.addEventListener(
+      "astro:before-preparation",
+      (event: TransitionBeforePreparationEvent) => {
+        const cameFromNavLink =
+          event.sourceElement instanceof Element &&
+          event.sourceElement.closest("[data-preserve-nav-scroll]");
 
-      document.addEventListener(
-        "astro:before-preparation",
-        (event: TransitionBeforePreparationEvent) => {
-          const shouldRestoreScroll =
-            usesSharedShell(document.body) &&
-            (event.navigationType === "push" ||
-              event.navigationType === "replace") &&
-            !isSamePageHashNavigation(event.from, event.to);
-
-          // Save the live page scroll before Astro swaps the body.
-          window.__balibaloschPendingScrollRestore = shouldRestoreScroll
-            ? { top: window.scrollY }
+        pendingScrollY =
+          cameFromNavLink &&
+          (event.navigationType === "push" ||
+            event.navigationType === "replace")
+            ? window.scrollY
             : null;
-        },
-      );
+      },
+    );
 
-      document.addEventListener("astro:after-swap", () => {
-        const pendingScrollRestore = window.__balibaloschPendingScrollRestore;
-        window.__balibaloschPendingScrollRestore = null;
+    document.addEventListener("astro:after-swap", () => {
+      if (pendingScrollY === null) {
+        return;
+      }
 
-        if (!pendingScrollRestore || !usesSharedShell(document.body)) {
-          return;
-        }
+      const scrollTop = clampScrollTop(pendingScrollY);
+      pendingScrollY = null;
 
-        // Replaying the same scroll position reproduces the same hero/nav overlap.
-        window.scrollTo({
-          left: 0,
-          top: clampScrollTop(pendingScrollRestore.top),
-          behavior: "instant",
-        });
+      // Replaying the same scroll position reproduces the same hero/nav overlap.
+      window.scrollTo({
+        left: 0,
+        top: scrollTop,
+        behavior: "instant",
       });
-    }
+    });
   </script>
 </head>

@@ -53,6 +53,7 @@ const isActivePath = (href: string) => normalizePath(href) === currentPath;
                   <a
                     role="tab"
                     href={item.href}
+                    data-preserve-nav-scroll
                     aria-current={isActivePath(item.href) ? "page" : undefined}
                     class={`d-tab text-xl ${isActivePath(item.href) ? "d-tab-active" : ""}`}
                   >
@@ -88,6 +89,7 @@ const isActivePath = (href: string) => normalizePath(href) === currentPath;
           <li>
             <a
               href={item.href}
+              data-preserve-nav-scroll
               aria-current={isActivePath(item.href) ? "page" : undefined}
               class={
                 isActivePath(item.href)
